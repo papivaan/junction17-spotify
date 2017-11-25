@@ -4,9 +4,9 @@
     <form id="search" v-on:submit.prevent="search">
       <label for="search">Search by song name</label>
       <input title="search" type="text" v-model="searchTerm" />
-      <input type="submit" value="Search" />
+      <input class="btn btn-secodary" type="submit" value="Search" />
     </form>
-    <button @click="samba">Give me samba!</button>
+    <button class="btn btn-primary" @click="samba">Give me samba!</button>
     <div class="panel-body">
       <table class="table table-dark">
         <thead>
