@@ -1,9 +1,9 @@
 <template>
-  <div class="hello">
+  <div class="container-fluid">
     <h1>{{ msg }}</h1>
-    <button @click="search">Give me samba!</button>
+    <button id="search" @click="search">Give me samba!</button>
     <div class="panel-body">
-      <table class="table table-striped">
+      <table class="table table-dark">
         <thead>
         <tr>
           <th>Artist</th>
@@ -15,7 +15,7 @@
         <tr v-for="song in songs">
           <td>{{song.artists[0].name}}</td>
           <td>{{song.name}}</td>
-          <td><button @click="requestSong(song)">Request</button></td>
+          <td><button id="request" @click="requestSong(song)">Request</button></td>
         </tr>
         </tbody>
       </table>
@@ -64,26 +64,4 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .hello {
-    max-width: 56rem;
-    margin: auto;
-  }
-
-  .table {
-    text-align: left;
-  }
-
-  h1, h2 {
-    font-weight: normal;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  li {
-    margin: 0 10px;
-  }
-  a {
-    color: #42b983;
-  }
 </style>
