@@ -26,6 +26,7 @@
 <script>
   import axios from 'axios'
   import firebase from '../service/firebase'
+  import toastr from 'toastr'
 
   export default {
     name: 'Request',
@@ -57,6 +58,7 @@
       },
       requestSong (song) {
         firebase.database.ref('requested').push(song)
+        toastr.success('Well done! You have successfully requested a song. Keep up the good samba! ;-)')
       }
     }
   }
