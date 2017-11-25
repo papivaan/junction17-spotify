@@ -13,7 +13,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="song in requested">
+        <tr v-for="song in songs">
           <td>{{song.artists[0].name}}</td>
           <td>{{song.name}}</td>
           <td><button @click="confirmSong(song)">Confirm</button></td>
@@ -26,8 +26,13 @@
 </template>
 
 <script>
+  import firebase from '../service/firebase'
+
   export default {
     name: 'PlaylistManager',
+    firebase: {
+      songs: firebase.database.ref('requested')
+    },
     data () {
       return {
         msg: 'Manage your Party Playlist here!'
