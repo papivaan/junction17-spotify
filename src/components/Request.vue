@@ -1,7 +1,10 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <button @click="search">Give me samba!</button>
+    <form id="search" v-on:submit.prevent="search">
+      <input title="search" type="text" v-model="searchTerm" />
+      <input type="submit" value="Give me samba!" />
+    </form>
     <div class="panel-body">
       <table class="table table-striped">
         <thead>
@@ -33,14 +36,15 @@
     data () {
       return {
         msg: 'Add your music to party list! WOOPWOOP!',
+        searchTerm: '',
         songs: [],
-        bearer: 'BQCC7Umexbpd0Qq2NIx8i_5oJKoO0U-1nda3rxpNBYX3PLhCv1CxSfvTJIoJzDo194csMF7bNpTDrk_upvtNKw'
+        bearer: 'BQAt1_rx-LhV_HYO6c_8ZvNXeqBrpm_NvAmHqjrg_I0-LAd23aaZ0JcRigc9U4F_BC9YS_k8lQKiyhQpnk1TRQ'
       }
     },
     methods: {
       search () {
         let items = []
-        axios.get('https://api.spotify.com/v1/search?q=what%20is%20love&type=track', {
+        axios.get('https://api.spotify.com/v1/search?q=' + this.searchTerm + '&type=track', {
           headers: {
             Authorization: 'Bearer ' + this.bearer
           }
