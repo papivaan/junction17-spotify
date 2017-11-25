@@ -42,6 +42,7 @@
       confirmSong (song) {
       },
       declineSong (song) {
+        firebase.database.ref('requested').child(song['.key']).remove()
       }
     }
   }
