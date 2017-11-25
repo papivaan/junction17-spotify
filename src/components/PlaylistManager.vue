@@ -1,7 +1,7 @@
 <template>
   <div class="playlist-manager">
     <h1>{{ msg }}</h1>
-    <button @click="search">Give me samba!</button>
+    <button>Give me samba!</button>
     <div class="panel-body">
       <table class="table table-striped">
         <thead>
@@ -13,7 +13,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="song in songs">
+        <tr v-for="song in requested">
           <td>{{song.artists[0].name}}</td>
           <td>{{song.name}}</td>
           <td><button @click="confirmSong(song)">Confirm</button></td>
@@ -26,33 +26,18 @@
 </template>
 
 <script>
-  import Firebase from 'firebase'
-
-  let config = {
-    apiKey: 'AIzaSyAJ3Xjh_ieIKqeEvP7nEXxtJy7-RiDrz_Q',
-    authDomain: 'junction17-spotify-user.firebaseapp.com',
-    databaseURL: 'https://junction17-spotify-user.firebaseio.com',
-    projectId: 'junction17-spotify-user',
-    storageBucket: 'junction17-spotify-user.appspot.com',
-    messagingSenderId: '9333696788'
-  }
-
-  let app = Firebase.initializeApp(config)
-  let db = app.database()
-
-  let requestedRef = db.ref('requested')
-
   export default {
     name: 'PlaylistManager',
-    firebase: {
-      requested: requestedRef
-    },
     data () {
       return {
         msg: 'Manage your Party Playlist here!'
       }
     },
     methods: {
+      confirmSong (song) {
+      },
+      declineSong (song) {
+      }
     }
   }
 </script>

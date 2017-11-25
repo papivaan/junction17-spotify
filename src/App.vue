@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <img src="http://pixel.nymag.com/imgs/daily/vulture/2015/06/26/26-spotify.w529.h529.jpg">
+    <router-link to="/">Home</router-link>
+    <router-link to="/dj">DJ</router-link>
     <router-view></router-view>
   </div>
 </template>
