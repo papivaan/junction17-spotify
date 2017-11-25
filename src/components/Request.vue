@@ -2,9 +2,11 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <form id="search" v-on:submit.prevent="search">
+      <label for="search">Search by song name</label>
       <input title="search" type="text" v-model="searchTerm" />
-      <input type="submit" value="Give me samba!" />
+      <input type="submit" value="Search" />
     </form>
+    <button @click="samba">Give me samba!</button>
     <div class="panel-body">
       <table class="table table-striped">
         <thead>
@@ -45,6 +47,25 @@
       search () {
         let items = []
         axios.get('https://api.spotify.com/v1/search?q=' + this.searchTerm + '&type=track', {
+          headers: {
+            Authorization: 'Bearer ' + this.bearer
+          }
+        })
+          .then(function (response) {
+            let tracks = response.data.tracks.items
+            for (let i = 0; i < tracks.length; i++) {
+              items.push(tracks[i])
+            }
+          })
+          .catch(function (error) {
+            console.log(error)
+          })
+        this.songs = items
+      },
+      samba () {
+        this.searchTerm = ''
+        let items = []
+        axios.get('https://api.spotify.com/v1/search?q=samba%20de%20janeiro&type=track', {
           headers: {
             Authorization: 'Bearer ' + this.bearer
           }
