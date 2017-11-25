@@ -39,18 +39,13 @@
       return {
         msg: 'Add your music to party list! WOOPWOOP!',
         searchTerm: '',
-        songs: [],
-        bearer: 'BQAt1_rx-LhV_HYO6c_8ZvNXeqBrpm_NvAmHqjrg_I0-LAd23aaZ0JcRigc9U4F_BC9YS_k8lQKiyhQpnk1TRQ'
+        songs: []
       }
     },
     methods: {
       search () {
         let items = []
-        axios.get('https://api.spotify.com/v1/search?q=' + this.searchTerm + '&type=track', {
-          headers: {
-            Authorization: 'Bearer ' + this.bearer
-          }
-        })
+        axios.get('https://junction17-spotify-proxy.herokuapp.com/api/search?q=' + this.searchTerm + '&type=track')
           .then(function (response) {
             let tracks = response.data.tracks.items
             for (let i = 0; i < tracks.length; i++) {
@@ -65,11 +60,7 @@
       samba () {
         this.searchTerm = ''
         let items = []
-        axios.get('https://api.spotify.com/v1/search?q=samba%20de%20janeiro&type=track', {
-          headers: {
-            Authorization: 'Bearer ' + this.bearer
-          }
-        })
+        axios.get('https://junction17-spotify-proxy.herokuapp.com/api/search?q=samba%20de%20janeiro&type=track')
           .then(function (response) {
             let tracks = response.data.tracks.items
             for (let i = 0; i < tracks.length; i++) {
