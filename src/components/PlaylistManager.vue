@@ -16,8 +16,8 @@
         <tr v-for="song in songs">
           <td>{{song.artists[0].name}}</td>
           <td>{{song.name}}</td>
-          <td><button id="conf" @click="confirmSong(song)">Confirm</button></td>
-          <td><button id="dec" @click="declineSong(song)">Decline</button></td>
+          <td><button id="conf" class="btn btn-secondary" @click="confirmSong(song)">Confirm</button></td>
+          <td><button id="dec" class="btn btn-decline" @click="declineSong(song)">Decline</button></td>
         </tr>
         </tbody>
       </table>

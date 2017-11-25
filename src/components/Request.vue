@@ -20,7 +20,7 @@
         <tr v-for="song in songs">
           <td>{{song.artists[0].name}}</td>
           <td>{{song.name}}</td>
-          <td><button id="request" @click="requestSong(song)">Request</button></td>
+          <td><button id="request" class="btn btn-secondary" @click="requestSong(song)">Request</button></td>
         </tr>
         </tbody>
       </table>
