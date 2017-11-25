@@ -25,31 +25,15 @@
 
 <script>
   import axios from 'axios'
-  import Firebase from 'firebase'
-
-  let config = {
-    apiKey: 'AIzaSyAJ3Xjh_ieIKqeEvP7nEXxtJy7-RiDrz_Q',
-    authDomain: 'junction17-spotify-user.firebaseapp.com',
-    databaseURL: 'https://junction17-spotify-user.firebaseio.com',
-    projectId: 'junction17-spotify-user',
-    storageBucket: 'junction17-spotify-user.appspot.com',
-    messagingSenderId: '9333696788'
-  }
-
-  let app = Firebase.initializeApp(config)
-  let db = app.database()
-
-  let requestedRef = db.ref('requested')
+  import firebase from '../service/firebase'
 
   export default {
     name: 'Request',
-    firebase: {
-      requested: requestedRef
-    },
     data () {
       return {
         msg: 'Add your music to party list! WOOPWOOP!',
         songs: [],
+        requested: firebase.database.requested,
         bearer: 'BQCjYDbxBTKx1VjGznUe5rtzZ3K1Ybamrll30YFfvam7qew0n1BRShIZfA7kAxFFxMWJ3DXCdweG45PXCg4ZLQ'
       }
     },
@@ -73,7 +57,8 @@
         this.songs = items
       },
       requestSong (song) {
-        requestedRef.push(song)
+        // requestedRef.push(song)
+        this.requested.push(song)
       }
     }
   }
