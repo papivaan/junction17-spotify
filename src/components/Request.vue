@@ -34,13 +34,13 @@
       return {
         msg: 'Add your music to party list! WOOPWOOP!',
         songs: [],
-        bearer: 'BQCC7Umexbpd0Qq2NIx8i_5oJKoO0U-1nda3rxpNBYX3PLhCv1CxSfvTJIoJzDo194csMF7bNpTDrk_upvtNKw'
+        bearer: 'BQBM182eVuhR7JmBAw4XbDwvG6yj5mzHJeeYAH75G-D726DmKmmUAPiePhLEp-0Bp6U8TaYFMg8L2AC7EFKuZw'
       }
     },
     methods: {
       search () {
         let items = []
-        axios.get('https://api.spotify.com/v1/search?q=what%20is%20love&type=track', {
+        axios.get('https://api.spotify.com/v1/search?q=samba%20de%20janeiro&type=track', {
           headers: {
             Authorization: 'Bearer ' + this.bearer
           }
