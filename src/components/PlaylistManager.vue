@@ -3,7 +3,7 @@
     <h1>{{ msg }}</h1>
     <button>Give me samba!</button>
     <div class="panel-body">
-      <table class="table table-striped">
+      <table class="table table-dark">
         <thead>
         <tr>
           <th>Artist</th>
@@ -16,8 +16,8 @@
         <tr v-for="song in songs">
           <td>{{song.artists[0].name}}</td>
           <td>{{song.name}}</td>
-          <td><button @click="confirmSong(song)">Confirm</button></td>
-          <td><button @click="declineSong(song)">Decline</button></td>
+          <td><button id="conf" @click="confirmSong(song)">Confirm</button></td>
+          <td><button id="dec" @click="declineSong(song)">Decline</button></td>
         </tr>
         </tbody>
       </table>

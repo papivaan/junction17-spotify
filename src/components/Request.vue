@@ -2,8 +2,8 @@
   <div class="container-fluid">
     <h1>{{ msg }}</h1>
     <form id="search" v-on:submit.prevent="search">
-      <label for="search">Search by song name</label>
-      <input title="search" type="text" v-model="searchTerm" />
+
+      <input title="search" placeholder="Search by song name" type="text" v-model="searchTerm" />
       <input type="submit" value="Search" />
     </form>
     <button @click="samba">Give me samba!</button>

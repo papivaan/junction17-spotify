@@ -61,7 +61,7 @@
     animation: pulse 2s infinite;
   }
 
-  #request {
+  #request, #conf, #dec {
     color: black;
   }
 
