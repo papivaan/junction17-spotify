@@ -33,14 +33,13 @@
       return {
         msg: 'Add your music to party list! WOOPWOOP!',
         songs: [],
-        requested: firebase.database.requested,
-        bearer: 'BQCjYDbxBTKx1VjGznUe5rtzZ3K1Ybamrll30YFfvam7qew0n1BRShIZfA7kAxFFxMWJ3DXCdweG45PXCg4ZLQ'
+        bearer: 'BQCC7Umexbpd0Qq2NIx8i_5oJKoO0U-1nda3rxpNBYX3PLhCv1CxSfvTJIoJzDo194csMF7bNpTDrk_upvtNKw'
       }
     },
     methods: {
       search () {
         let items = []
-        axios.get('https://api.spotify.com/v1/search?q=samba%20de%20janeiro&type=track', {
+        axios.get('https://api.spotify.com/v1/search?q=haistakaa&type=track', {
           headers: {
             Authorization: 'Bearer ' + this.bearer
           }
@@ -57,8 +56,7 @@
         this.songs = items
       },
       requestSong (song) {
-        // requestedRef.push(song)
-        this.requested.push(song)
+        firebase.database.ref('requested').push(song)
       }
     }
   }
