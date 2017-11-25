@@ -10,6 +10,9 @@
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="right">
         <router-link id="dj" to="/dj">DJ</router-link>
       </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="">
+        <router-link id="playlist" to="/playlist">Playlist</router-link>
+      </div>
     </div>
     <router-view></router-view>
   </div>

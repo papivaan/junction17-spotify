@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Request from '@/components/Request'
 import PlaylistManager from '@/components/PlaylistManager'
+import Playlist from '@/components/Playlist'
 
 Vue.use(Router)
 
@@ -17,6 +18,11 @@ export default new Router({
       path: '/dj',
       name: 'PlaylistManager',
       component: PlaylistManager
+    },
+    {
+      path: '/playlist',
+      name: 'Playlist',
+      component: Playlist
     }
   ]
 })
