@@ -39,7 +39,7 @@
     methods: {
       search () {
         let items = []
-        axios.get('https://api.spotify.com/v1/search?q=haistakaa&type=track', {
+        axios.get('https://api.spotify.com/v1/search?q=what%20is%20love&type=track', {
           headers: {
             Authorization: 'Bearer ' + this.bearer
           }
