@@ -2,11 +2,11 @@
   <div class="container-fluid">
     <h1>{{ msg }}</h1>
     <form id="search" v-on:submit.prevent="search">
-
-      <input title="search" placeholder="Search by song name" type="text" v-model="searchTerm" />
-      <input type="submit" value="Search" />
+      <label for="search">Search by song name</label>
+      <input title="search" type="text" v-model="searchTerm" />
+      <input class="btn btn-secodary" type="submit" value="Search" />
     </form>
-    <button @click="samba">Give me samba!</button>
+    <button class="btn btn-primary" @click="samba">Give me samba!</button>
     <div class="panel-body">
       <table class="table table-dark">
         <thead>

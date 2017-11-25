@@ -27,8 +27,49 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
+    color: #fff;
     padding-top: 60px;
+  }
+
+  .btn {
+    display: inline-block;
+    font-size: 1.65rem;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: .5rem 1rem;
+    border-radius: .35rem;
+    margin: 1rem;
+    -webkit-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+  }
+  .btn-primary {
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+  }
+  .btn-primary:hover {
+    border: 2px solid #000;
+    background-color: #84bd00;
+    color: #000;
+  }
+  .btn-secondary {
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+  }
+  .btn-secondary:hover {
+    border: 2px solid #000;
+    background-color: #84bd00;
+    color: #000;
   }
 
   h1, h2 {
