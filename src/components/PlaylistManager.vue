@@ -27,6 +27,7 @@
 
 <script>
   import firebase from '../service/firebase'
+  import toastr from 'toastr'
 
   export default {
     name: 'PlaylistManager',
@@ -40,9 +41,11 @@
     },
     methods: {
       confirmSong (song) {
+        toastr.info('Not yet implemented. You will hopefully hear the samba very soon! :)')
       },
       declineSong (song) {
         firebase.database.ref('requested').child(song['.key']).remove()
+        toastr.warning('Song successfully removed from requests')
       }
     }
   }
