@@ -1,7 +1,12 @@
 <template>
   <div class="container-fluid">
     <h1>{{ msg }}</h1>
-    <button id="search" @click="search">Give me samba!</button>
+    <form id="search" v-on:submit.prevent="search">
+      <label for="search">Search by song name</label>
+      <input title="search" type="text" v-model="searchTerm" />
+      <input type="submit" value="Search" />
+    </form>
+    <button @click="samba">Give me samba!</button>
     <div class="panel-body">
       <table class="table table-dark">
         <thead>
@@ -26,20 +31,41 @@
 <script>
   import axios from 'axios'
   import firebase from '../service/firebase'
+  import toastr from 'toastr'
 
   export default {
     name: 'Request',
     data () {
       return {
         msg: 'Add your music to party list! WOOPWOOP!',
+        searchTerm: '',
         songs: [],
-        bearer: 'BQCC7Umexbpd0Qq2NIx8i_5oJKoO0U-1nda3rxpNBYX3PLhCv1CxSfvTJIoJzDo194csMF7bNpTDrk_upvtNKw'
+        bearer: 'BQAt1_rx-LhV_HYO6c_8ZvNXeqBrpm_NvAmHqjrg_I0-LAd23aaZ0JcRigc9U4F_BC9YS_k8lQKiyhQpnk1TRQ'
       }
     },
     methods: {
       search () {
         let items = []
-        axios.get('https://api.spotify.com/v1/search?q=haistakaa&type=track', {
+        axios.get('https://api.spotify.com/v1/search?q=' + this.searchTerm + '&type=track', {
+          headers: {
+            Authorization: 'Bearer ' + this.bearer
+          }
+        })
+          .then(function (response) {
+            let tracks = response.data.tracks.items
+            for (let i = 0; i < tracks.length; i++) {
+              items.push(tracks[i])
+            }
+          })
+          .catch(function (error) {
+            console.log(error)
+          })
+        this.songs = items
+      },
+      samba () {
+        this.searchTerm = ''
+        let items = []
+        axios.get('https://api.spotify.com/v1/search?q=samba%20de%20janeiro&type=track', {
           headers: {
             Authorization: 'Bearer ' + this.bearer
           }
@@ -57,6 +83,7 @@
       },
       requestSong (song) {
         firebase.database.ref('requested').push(song)
+        toastr.success('Well done! You have successfully requested a song. Keep up the good samba! ;-)')
       }
     }
   }
