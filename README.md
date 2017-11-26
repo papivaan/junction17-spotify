@@ -13,8 +13,8 @@ This project was built using Vue.js, Node.js, Firebase and Heroku.
 ## Screenshots
 
 ![request](https://raw.githubusercontent.com/rennehir/junction17-spotify/master/screenshots/request.png)
-![manager](https://raw.githubusercontent.com/rennehir/junction17-spotify/master/path/to/img.png)
-![playlist](https://raw.githubusercontent.com/rennehir/junction17-spotify/master/path/to/img.png)
+![manager](https://raw.githubusercontent.com/rennehir/junction17-spotify/master/screenshots/manager.png)
+![playlist](https://raw.githubusercontent.com/rennehir/junction17-spotify/master/screenshots/playlist.png)
 
 
 ## Build Setup
