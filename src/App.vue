@@ -37,6 +37,10 @@
     max-width: 72rem;
   }
 
+  input {
+    color: #000;
+  }
+
   .btn {
     display: inline-block;
     font-size: 1.65rem;
@@ -87,6 +91,12 @@
     border: 2px solid #000;
     background-color: #c4000e;
     color: #000;
+  }
+
+  .btn:focus {
+    background-color: inherit;
+    border-color: #fff;
+    color: #fff;
   }
 
   h1, h2 {

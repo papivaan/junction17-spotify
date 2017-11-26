@@ -27,6 +27,7 @@
 <script>
   import firebase from '../service/firebase'
   import toastr from 'toastr'
+  import axios from 'axios'
 
   export default {
     name: 'PlaylistManager',
@@ -40,6 +41,17 @@
     },
     methods: {
       confirmSong (song) {
+        axios.get('https://junction17-spotify-proxy.herokuapp.com/api/users/rennehir/playlists/3GztKOtXsDfFBGohvBw8y8/tracks', {
+          'uris': [
+            'spotify:track:37Q5anxoGWYdRsyeXkkNoI'
+          ]
+        })
+          .then(function (response) {
+            console.log(response)
+          })
+          .catch(function (error) {
+            console.log(error)
+          })
         toastr.info('Not yet implemented. You will hopefully hear the samba very soon! :)')
       },
       declineSong (song) {
