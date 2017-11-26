@@ -24,7 +24,10 @@
 
 <script>
   import axios from 'axios'
-  // import toastr from 'toastr'
+  import toastr from 'toastr'
+  import * as SpotifyWebApi from 'spotify-web-api-js'
+
+  let spotify = new SpotifyWebApi()
 
   export default {
     name: 'Playlist',
@@ -36,7 +39,7 @@
     },
     created () {
       let items = []
-      axios.get('https://junction17-spotify-proxy.herokuapp.com/api/users/mi_ba/playlists/7Em91nUmHmjFAePCZ1wwJu/tracks')
+      axios.get('https://junction17-spotify-proxy.herokuapp.com/api/users/rennehir/playlists/0KRmcOHYYZ8OjNyXSTsYVZ/tracks')
         .then(function (response) {
           let tracks = response.data.items
           for (let i = 0; i < tracks.length; i++) {
@@ -47,6 +50,23 @@
           console.log(error)
         })
       this.songs = items
+    },
+    methods: {
+      removeSong (song) {
+        spotify.removeTracksFromPlaylist(
+          'rennehir',
+          '0KRmcOHYYZ8OjNyXSTsYVZ',
+          [song.uri],
+          function (error, response) {
+            if (error) {
+              console.log('Error: ' + error)
+              toastr.error('Sorry, something didn\'t go as planned')
+            } else {
+              toastr.success('Nice choice! Song successfully removed from the playlist.')
+            }
+          }
+        )
+      }
     }
   }
 </script>

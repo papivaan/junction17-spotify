@@ -2,6 +2,7 @@
   <div>
   <div class="playlist">
     <h1>{{ msg }}</h1>
+    <a class="btn btn-secondary" href="https://junction17-spotify-proxy.herokuapp.com/" target="_blank">Login</a>
   </div>
     <div class="description">
       <p>Welcome to use our Spotify API powered party music list!</p>
