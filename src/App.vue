@@ -1,13 +1,15 @@
 <template>
   <div class="container" id="app">
     <div class="row">
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="left">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <img id="logo" src="../src/assets/logo-spotify.png">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <router-link id="home" class="btn btn-primary" to="/">Home</router-link>
       </div>
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-        <img id="logo"src="src/assets/logo-spotify.png">
-      </div>
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="right">
         <router-link id="dj" class="btn btn-primary" to="/dj">DJ</router-link>
       </div>
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="">
@@ -32,6 +34,7 @@
     text-align: center;
     color: #fff;
     padding-top: 60px;
+    max-width: 72rem;
   }
 
   .btn {
@@ -55,6 +58,7 @@
     transition: all .3s ease-in;
   }
   .btn-primary {
+    min-width: 12rem;
     border: 2px solid #fff;
     background-color: transparent;
     color: #fff;
@@ -109,6 +113,7 @@
   #logo {
     border-radius: 50%;
     max-width: 250px;
+    margin-bottom: 2rem;
   }
 
   #logo:hover {
@@ -130,10 +135,10 @@
     -webkit-box-shadow: 0 0 0 0 rgba(124,252,0, 0.4);
   }
   70% {
-      -webkit-box-shadow: 0 0 0 50px rgba(124,252,0, 0);
+      -webkit-box-shadow: 0 0 20px 50px rgba(124,252,0, 0);
   }
   100% {
-      -webkit-box-shadow: 0 0 0 0 rgba(124,252,0, 0);
+      -webkit-box-shadow: 0 0 50px 0 rgba(124,252,0, 0);
   }
   }
 
@@ -143,12 +148,12 @@
     box-shadow: 0 0 0 0 rgba(124,252,0, 0.4);
   }
   70% {
-      -moz-box-shadow: 0 0 0 10px rgba(124,252,0, 0.4);
-      box-shadow: 0 0 0 10px rgba(124,252,0, 0.4);
+      -moz-box-shadow: 0 0 20px 10px rgba(124,252,0, 0.4);
+      box-shadow: 0 0 20px 10px rgba(124,252,0, 0.4);
   }
   100% {
-      -moz-box-shadow: 0 0 0 0 rgba(124,252,0, 0.4);
-      box-shadow: 0 0 0 0 rgba(124,252,0, 0.4);
+      -moz-box-shadow: 0 0 50px 0 rgba(124,252,0, 0.2);
+      box-shadow: 0 0 50px 0 rgba(124,252,0, 0.2);
   }
 }
 

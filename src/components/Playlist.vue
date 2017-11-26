@@ -14,7 +14,7 @@
         <tr v-for="song in songs">
           <td>{{song.track.artists[0].name}}</td>
           <td>{{song.track.name}}</td>
-          <td><button id="dec" @click="removeSong(song)">Remove</button></td>
+          <td><button id="dec" class="btn btn-decline" @click="removeSong(song)">Remove</button></td>
         </tr>
         </tbody>
       </table>
