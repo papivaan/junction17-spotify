@@ -49,7 +49,7 @@
     user-select: none;
     padding: .5rem 1rem;
     border-radius: .35rem;
-    margin: 1rem;
+    margin: .5rem;
     -webkit-transition: all .3s ease-in;
     -o-transition: all .3s ease-in;
     transition: all .3s ease-in;
@@ -65,13 +65,23 @@
     color: #000;
   }
   .btn-secondary {
-    border: 2px solid #fff;
+    border: 2px solid #84bd00;
     background-color: transparent;
     color: #fff;
   }
   .btn-secondary:hover {
     border: 2px solid #000;
     background-color: #84bd00;
+    color: #000;
+  }
+  .btn-decline {
+    border: 2px solid #c4000e;
+    background-color: transparent;
+    color: #fff;
+  }
+  .btn-decline:hover {
+    border: 2px solid #000;
+    background-color: #c4000e;
     color: #000;
   }
 
@@ -105,11 +115,7 @@
     animation: pulse 2s infinite;
   }
 
-  #request, #conf, #dec {
-    color: black;
-  }
-
-  tr {
+  table {
     color: white;
   }
 
