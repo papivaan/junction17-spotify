@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Home from '@/components/Home'
 import Request from '@/components/Request'
 import PlaylistManager from '@/components/PlaylistManager'
 import Playlist from '@/components/Playlist'
@@ -11,6 +12,11 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/request',
       name: 'Request',
       component: Request
     },
