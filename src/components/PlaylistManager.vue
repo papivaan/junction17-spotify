@@ -1,7 +1,6 @@
 <template>
   <div class="playlist-manager">
     <h1>{{ msg }}</h1>
-    <button>Give me samba!</button>
     <div class="panel-body">
       <table class="table table-dark">
         <thead>
