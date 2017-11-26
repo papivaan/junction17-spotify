@@ -6,16 +6,16 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
         <router-link id="home" class="btn btn-primary" to="/">Home</router-link>
       </div>
-      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
         <router-link id="request" class="btn btn-primary" to="/request">Request</router-link>
       </div>
-      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
         <router-link id="dj" class="btn btn-primary" to="/dj">DJ</router-link>
       </div>
-      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="">
+      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" id="">
         <router-link id="playlist" class="btn btn-primary" to="/playlist">Playlist</router-link>
       </div>
     </div>
