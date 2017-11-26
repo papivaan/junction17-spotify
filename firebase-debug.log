@@ -1,0 +1,66 @@
+[debug] [2017-11-26T00:16:43.163Z] ----------------------------------------------------------------------
+[debug] [2017-11-26T00:16:43.166Z] Command:       /Users/renne/.nvm/versions/node/v8.1.4/bin/node /Users/renne/.nvm/versions/node/v8.1.4/bin/firebase deploy
+[debug] [2017-11-26T00:16:43.166Z] CLI Version:   3.15.3
+[debug] [2017-11-26T00:16:43.166Z] Platform:      darwin
+[debug] [2017-11-26T00:16:43.166Z] Node Version:  v8.1.4
+[debug] [2017-11-26T00:16:43.166Z] Time:          Sun Nov 26 2017 02:16:43 GMT+0200 (EET)
+[debug] [2017-11-26T00:16:43.167Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-11-26T00:16:43.182Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-11-26T00:16:43.182Z] > authorizing via signed-in user
+[debug] [2017-11-26T00:16:43.184Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-11-26T00:16:43.185Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/52DzMKMaDo-pqwvIEEXCZERIdozaky6hHtjC3qF_CYU',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sun Nov 26 2017 02:16:43 GMT+0200 (EET)
+[debug] [2017-11-26T00:16:43.482Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-26T00:16:43.491Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/junction17-spotify-user  
+ Sun Nov 26 2017 02:16:43 GMT+0200 (EET)
+[debug] [2017-11-26T00:17:04.574Z] <<< HTTP RESPONSE 500
+[debug] [2017-11-26T00:17:04.574Z] <<< HTTP RESPONSE BODY
+[error] 
+[error] Error: HTTP Error: 500, An unknown error occurred. Please contact support.
+[debug] [2017-11-26T00:17:04.578Z] Error Context: {
+  "body": {
+    "error": {
+      "code": "UNKNOWN_ERROR",
+      "message": "An unknown error occurred. Please contact support."
+    }
+  },
+  "response": {
+    "statusCode": 500,
+    "body": {
+      "error": {
+        "code": "UNKNOWN_ERROR",
+        "message": "An unknown error occurred. Please contact support."
+      }
+    },
+    "headers": {
+      "server": "nginx",
+      "date": "Sun, 26 Nov 2017 00:17:04 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "97",
+      "connection": "close",
+      "x-content-type-options": "nosniff"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "admin.firebase.com",
+        "port": 443,
+        "hostname": "admin.firebase.com",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/v1/projects/junction17-spotify-user",
+        "path": "/v1/projects/junction17-spotify-user",
+        "href": "https://admin.firebase.com/v1/projects/junction17-spotify-user"
+      },
+      "method": "GET"
+    }
+  }
+}
