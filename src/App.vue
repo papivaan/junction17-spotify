@@ -2,16 +2,16 @@
   <div class="container" id="app">
     <div class="row">
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="left">
-        <router-link id="home" to="/">Home</router-link>
+        <router-link id="home" class="btn btn-primary" to="/">Home</router-link>
       </div>
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <img id="logo"src="src/assets/logo-spotify.png">
       </div>
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="right">
-        <router-link id="dj" to="/dj">DJ</router-link>
+        <router-link id="dj" class="btn btn-primary" to="/dj">DJ</router-link>
       </div>
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="">
-        <router-link id="playlist" to="/playlist">Playlist</router-link>
+        <router-link id="playlist" class="btn btn-primary" to="/playlist">Playlist</router-link>
       </div>
     </div>
     <router-view></router-view>
